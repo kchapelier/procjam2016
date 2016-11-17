@@ -1,0 +1,40 @@
+{
+  "name": "procjam2016",
+  "version": "0.1.0",
+  "private": true,
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "build": "browserify src/index.js -d --s main -u crypto > build/main.js",
+    "build-pds-exp": "browserify src/index-pds-exp.js -d --s main -u crypto > build/main-pds-exp.js",
+    "build-convchain-exp": "browserify src/index-convchain-exp.js -d --s main -u crypto > build/main-convchain-exp.js",
+    "build-worker-pds": "browserify src/worker-pds-exp.js -d --s main -u crypto > build/worker-pds-exp.js",
+    "build-worker-convchain": "browserify src/worker-convchain-exp.js -d --s main -u crypto > build/worker-convchain-exp.js",
+    "serialize-models": "node obj-serialize.js > assets/models/compiled.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kchapelier/procjam2016.git"
+  },
+  "author": "Kevin Chapelier",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kchapelier/procjam2016/issues"
+  },
+  "homepage": "https://github.com/kchapelier/procjam2016",
+  "dependencies": {
+    "convchain": "^1.1.0",
+    "howler": "^2.0.1",
+    "is-array": "^1.0.1",
+    "localforage": "^1.4.3",
+    "migl-gameloop": "^2.0.0",
+    "migl-input": "^2.0.2",
+    "migl-rng": "^1.0.0",
+    "ngram-word-generator": "^1.2.0",
+    "poisson-disk-sampling": "^1.0.0"
+  },
+  "devDependencies": {
+    "glob": "^7.1.1",
+    "wavefront-obj-parser": "^0.3.0"
+  }
+}
